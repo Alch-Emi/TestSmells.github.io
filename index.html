@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="assets/w3-theme-teal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
+	<style>
+		.v-center {
+			display: grid;
+			align-content: center;
+		}
+	</style>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117089382-1"></script>
     <script>
@@ -80,6 +87,65 @@
                 <iframe width="550" height="305" src="https://www.youtube.com/embed/clJBz6OGq_M?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </p>
         </div>
+
+		<h2>What People Are Saying</h2>
+		<div class="w3-display-container w3-container w3-card w3-margin-top w3-padded-box v-center" style="min-height: 400px">
+			<div class="w3-display-container review-slides" style="padding: 50px 80px">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+					commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+					et magnis dis parturientt.Lorem ipsum dolor sit amet, consectetuer
+					adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+					sociis natoque penatibus et magnis dis parturientt.
+				</p>
+				<p><b>Amy Godger</b></p>
+			</div>
+			<div class="w3-display-container review-slides" style="padding: 50px 80px">
+				<p>
+					It is a long established fact that a reader will be distracted by the
+					readable content of a page when looking at its layout. The point of
+					using Lorem Ipsum is that it has a more-or-less normal distribution of
+					letters, as opposed to using 'Content here, content here', making it
+					look like readable English.
+				</p>
+				<p><b>Amy Godger</b></p>
+			</div>
+			<div class="w3-display-container review-slides" style="padding: 50px 30px">
+				<p>
+					There are many variations of passages of Lorem Ipsum available, but
+					the majority have suffered alteration in some form, by injected
+					humour, or randomised words which don't look even slightly believable.
+				</p>
+				<p><b>Amy Godger</b></p>
+			</div>
+			<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("review-slides");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length} ;
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				  }
+				  x[slideIndex-1].style.display = "grid";
+				}
+
+				function carousel() {
+					plusDivs(1);
+				  	setTimeout(carousel, 5000);
+				}
+				setTimeout(carousel, 5000);
+			</script>
+		</div>
 
         <div class="w3-card w3-padded-box w3-margin-top">
             <div class="w3-container w3-third w3-margin-top w3-margin-bottom">
