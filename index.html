@@ -89,7 +89,7 @@
         </div>
 
 		<h2>What People Are Saying</h2>
-		<div class="w3-display-container w3-container w3-card w3-margin-top w3-padded-box v-center" style="min-height: 400px">
+		<div class="w3-display-container w3-container w3-card w3-margin-top w3-padded-box v-center" style="min-height: calc(400px - 8vw)">
 			<div class="w3-display-container review-slides" style="padding: 50px 80px">
 				<p>
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -98,7 +98,10 @@
 					adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
 					sociis natoque penatibus et magnis dis parturientt.
 				</p>
-				<p><b>Amy Godger</b></p>
+				<p><b>
+					Amy Godger<br/>
+					<span style="font-size: 0.8em">Professor, University of ABC</span>
+				</b></p>
 			</div>
 			<div class="w3-display-container review-slides" style="padding: 50px 80px">
 				<p>
@@ -108,7 +111,10 @@
 					letters, as opposed to using 'Content here, content here', making it
 					look like readable English.
 				</p>
-				<p><b>Amy Godger</b></p>
+				<p><b>
+					Amy Godger<br/>
+					<span style="font-size: 0.8em">Professor, University of ABC</span>
+				</b></p>
 			</div>
 			<div class="w3-display-container review-slides" style="padding: 50px 30px">
 				<p>
@@ -116,7 +122,10 @@
 					the majority have suffered alteration in some form, by injected
 					humour, or randomised words which don't look even slightly believable.
 				</p>
-				<p><b>Amy Godger</b></p>
+				<p><b>
+					Amy Godger<br/>
+					<span style="font-size: 0.8em">Professor, University of ABC</span>
+				</b></p>
 			</div>
 			<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
 			<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
@@ -139,11 +148,7 @@
 				  x[slideIndex-1].style.display = "grid";
 				}
 
-				function carousel() {
-					plusDivs(1);
-				  	setTimeout(carousel, 5000);
-				}
-				setTimeout(carousel, 5000);
+				setInterval(plusDivs, 10000, 1);
 			</script>
 		</div>
 
